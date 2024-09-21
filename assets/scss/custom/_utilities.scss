@@ -1,0 +1,438 @@
+//
+// utilities.scss
+// Extended from Bootstrap
+//
+
+ol, ul {
+  padding-left: unset;
+  padding-right: 2rem;
+}
+
+.row > * {
+  padding-right: unset;
+  padding-inline-end: calc(var(--bs-gutter-x)* .5) !important;
+  padding-left: unset;
+  padding-inline-start: calc(var(--bs-gutter-x)* .5) !important;
+}
+
+[class^='ms-'],
+[class*=' ms-'] {
+  margin-left: unset !important;
+
+  &[class^='m-auto'],
+  &[class*=' m-auto'],
+  &[class^='mx-auto'],
+  &[class*=' mx-auto'] {
+    margin-inline-end: auto !important;
+  }
+}
+[class^='me-'],
+[class*=' me-'] {
+  margin-right: unset !important;
+
+  &[class^='m-auto'],
+  &[class*=' m-auto'],
+  &[class^='mx-auto'],
+  &[class*=' mx-auto'] {
+    margin-inline-start: auto !important;
+  }
+}
+:not(.row) > {
+  [class^='ps-'],
+  [class*=' ps-'] {
+    &:not([class*='ps-md-']) {
+      padding-left: unset !important;
+    }
+  }
+}
+[class^='ps-'],
+[class*=' ps-'] {
+  &:not([class*='ps-md-']) {
+    &[class^='form-control'],
+    &[class*=' form-control'],
+    &[class^='form-control'],
+    &[class*=' form-control'] {
+      padding-inline-end: .75rem !important;
+    }
+  }
+}
+:not(.row) > {
+  [class^='pe-'],
+  [class*=' pe-'] {
+    &:not([class*='pe-md-']) {
+      padding-right: unset !important;
+    }
+  }
+}
+[class^='pe-'],
+[class*=' pe-'] {
+  &:not([class*='pe-md-']) {
+    &[class^='form-control'],
+    &[class*=' form-control'],
+    &[class^='form-control'],
+    &[class*=' form-control'] {
+      padding-inline-start: .75rem !important;
+    }
+  }
+}
+@media (min-width: 768px) {
+  [class^='pe-md-'],
+  [class*=' pe-md-'] {
+    padding-right: unset !important;
+  }
+  [class^='ps-md-'],
+  [class*=' ps-md-'] {
+    padding-left: unset !important;
+  }
+}
+[class^='end-'],
+[class*=' end-'] {
+  right: unset !important;
+}
+[class^='start-'],
+[class*=' start-'] {
+  left: unset !important;
+}
+//[class^='border-end'],
+//[class*=' border-end'] {
+//  border-right: unset !important;
+//}
+//[class^='border-start'],
+//[class*=' border-start'] {
+//  border-inline-start: unset !important;
+//}
+[class^='rounded-end-'],
+[class*=' rounded-end-'] {
+  border-top-right-radius: inherit !important;
+  border-bottom-right-radius: inherit !important;
+}
+[class^='rounded-start-'],
+[class*=' rounded-start-'] {
+  border-top-left-radius: inherit !important;
+  border-bottom-left-radius: inherit !important;
+}
+
+.start-0 {
+  left: unset !important;
+  inset-inline-start: 0 !important;
+}
+
+.start-50 {
+  left: unset !important;
+  inset-inline-start: 50% !important;
+}
+
+.start-100 {
+  left: unset !important;
+  inset-inline-start: 100% !important;
+}
+
+.end-0 {
+  right: unset !important;
+  inset-inline-end: 0 !important;
+}
+
+.end-50 {
+  right: unset !important;
+  inset-inline-end: 50% !important;
+}
+
+.end-100 {
+  right: unset !important;
+  inset-inline-end: 100% !important;
+}
+
+.translate-middle {
+  [dir='rtl'] & {
+    transform: translate(50%, -50%) !important;
+  }
+}
+
+.translate-middle-x {
+  [dir='rtl'] & {
+    transform: translateX(50%) !important;
+  }
+}
+
+.-rotate-13 {
+  transform: rotate(-13deg) !important;
+}
+.-rotate-33 {
+  transform: rotate(-33deg) !important;
+}
+.-rotate-270 {
+  transform: rotate(-270deg) !important;
+}
+.-rotate-335 {
+  transform: rotate(-335deg) !important;
+}
+.-rotate-343 {
+  transform: rotate(-343deg) !important;
+}
+@media (min-width: 576px) {
+  .-rotate-sm-343 {
+    transform: rotate(-343deg) !important;
+  }
+}
+
+$utilities: ();
+
+$utilities: map-merge(
+  (
+    // Sizing utilities
+    'min-width':
+      (
+        property: min-width,
+        class: min-w,
+        values: (
+          auto: auto
+        )
+      ),
+
+    // Sizing utilities
+    'viewport-height':
+      (
+        property: height,
+        class: vh,
+        values: (
+          100: 100vh
+        )
+      ),
+
+    // Height pixels
+    'height-px':
+      (
+        property: height,
+        class: h,
+        responsive: true,
+        values: (
+          20px: 20px,
+          30px: 30px,
+          40px: 40px,
+          50px: 50px,
+          60px: 60px,
+          150px: 150px,
+          200px: 200px,
+          250px: 250px,
+          300px: 300px,
+          400px: 400px,
+          500px: 500px,
+          600px: 600px,
+          700px: 700px,
+          750px: 750px
+        )
+      ),
+
+    // Width pixels
+    'width-px':
+      (
+        property: width,
+        class: w,
+        responsive: true,
+        values: (
+          30: 30%,
+          20px: 20px,
+          30px: 30px,
+          40px: 40px,
+          50px: 50px,
+          80px: 80px,
+          150px: 150px,
+          200px: 200px,
+          250px: 250px
+        )
+      ),
+
+    // Background opacity
+    'bg-opacity':
+      (
+        css-var: true,
+        class: bg-opacity,
+        values: (
+          15: 0.15
+        )
+      ),
+
+    // Fill color for SVG
+    'fill-color':
+      (
+        property: fill,
+        class: fill,
+        values:
+          map-merge(
+            $theme-colors,
+            (
+              'white': $white,
+              'body': var(--#{$prefix}body-bg),
+              'mode': var(--#{$prefix}gray-900)
+            )
+          )
+      ),
+
+    // z index
+    'z-index':
+      (
+        property: z-index,
+        class: z-index,
+        values: (
+          0: 0,
+          1: 1,
+          2: 2,
+          9: 9,
+          99: 99,
+          n1: -1
+        )
+      ),
+
+    // Rotate
+    'rotate':
+      (
+        property: transform,
+        responsive: true,
+        class: rotate,
+        values: (
+          10: rotate(10deg),
+          13: rotate(13deg),
+          33: rotate(33deg),
+          180: rotate(180deg),
+          270: rotate(270deg),
+          335: rotate(335deg),
+          343: rotate(343deg),
+          355: rotate(355deg)
+        )
+      ),
+
+    //line height
+    'line-height':
+      (
+        property: line-height,
+        responsive: true,
+        class: lh,
+        values: (
+          0: 0,
+          base: 1.5
+        )
+      ),
+
+    // Opacity
+    'opacity':
+      (
+        property: opacity,
+        class: opacity,
+        values: (
+          0: 0,
+          1: 0.1,
+          2: 0.2,
+          3: 0.3,
+          4: 0.4,
+          5: 0.5,
+          6: 0.6,
+          7: 0.7,
+          8: 0.8,
+          9: 0.9
+        )
+      ),
+    "margin-start": (
+      responsive: true,
+      property: margin-inline-start,
+      class: ms,
+      values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-end": (
+      responsive: true,
+      property: margin-inline-end,
+      class: me,
+      values: map-merge($spacers, (auto: auto))
+    ),
+    "negative-margin-start": (
+      responsive: true,
+      property: margin-inline-start,
+      class: ms,
+      values: $negative-spacers
+    ),
+    "negative-margin-end": (
+      responsive: true,
+      property: margin-inline-end,
+      class: me,
+      values: $negative-spacers
+    ),
+    "padding-end": (
+      responsive: true,
+      property: padding-inline-end,
+      class: pe,
+      values: $spacers
+    ),
+    "padding-start": (
+      responsive: true,
+      property: padding-inline-start,
+      class: ps,
+      values: $spacers
+    ),
+    "text-align": (
+      responsive: true,
+      property: text-align,
+      class: text,
+      values: (
+        start: start,
+        end: end,
+        center: center,
+      )
+    ),
+    "start": (
+      property: inset-inline-start,
+      class: start,
+      values: $position-values
+    ),
+    "end": (
+      property: inset-inline-end,
+      class: end,
+      values: $position-values
+    ),
+    //"border-end": (
+    //  property: border-inline-end,
+    //  class: border-end,
+    //  values: (
+    //    null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+    //    0: 0,
+    //  )
+    //),
+    //"border-start": (
+    //  property: border-inline-start,
+    //  class: border-start,
+    //  values: (
+    //    null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+    //    0: 0,
+    //  )
+    //),
+    "rounded-end": (
+      property: border-start-end-radius border-end-end-radius,
+      class: rounded-end,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
+      )
+    ),
+    "rounded-start": (
+      property: border-end-start-radius border-start-start-radius,
+      class: rounded-start,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
+      )
+    ),
+  ),
+  $utilities
+);
