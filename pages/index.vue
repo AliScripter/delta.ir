@@ -1,11 +1,7 @@
-<template >
-    <div>
-        <NuxtPage />
-    </div>
+<template>
+  <div>
+    <NuxtPage />
+  </div>
 </template>
-<script>
-
-</script>
-<style>
-    
-</style>
+<script></script>
+<style></style>
