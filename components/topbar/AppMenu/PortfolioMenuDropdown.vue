@@ -93,8 +93,8 @@
     </li>
 </template>
 
-<script setup>
-import   MenuItemType  from '@/helpers/menu';
+<script lang="ts" setup>
+import MenuItemType from '@/helpers/menu';
 import { menuItemActive } from '@/components/topbar/AppMenu/getActiveClass';
 
 import { BIconArrowRight } from 'bootstrap-icons-vue';

@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     ],
 
     alias: {
-        '@/views/': '~/pages',
+        '@views': '~/pages',
         // '@/data': '~/pages/demos/CreativeAgency/data.ts',
     },
 });
