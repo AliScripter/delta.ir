@@ -10,7 +10,6 @@ import { FcGoogle } from 'oh-vue-icons/icons';
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: { enabled: true },
-
     // ssr: false,
     // vite: false,
     css: [
@@ -25,7 +24,7 @@ export default defineNuxtConfig({
         'vue-toastification/dist/index.css',
         'vazirmatn/misc/Farsi-Digits/Vazirmatn-FD-font-face.css',
 
-        // 'bootstrap-vue/dist/bootstrap-vue.css',
+        'bootstrap-vue/dist/bootstrap-vue.css',
     ],
     build: {
         transpile: [
@@ -35,9 +34,10 @@ export default defineNuxtConfig({
         ],
     },
     plugins: [
-        { src: '~/plugins/bootstrap-vue.js', mode: 'client' },
+        { src: '~/plugins/bootstrap-vue.js', mode: `client` },
         { src: '~/plugins/bootstrap.js', mode: 'client' }, // برای Bootstrap
         { src: '~/plugins/toast.js', mode: 'client' }, // برای Toast
+        { src: '~/plugins/vue3-autocounter.js', mode: 'client' },
     ],
 
     alias: {
@@ -45,12 +45,5 @@ export default defineNuxtConfig({
         // '@/data': '~/pages/demos/CreativeAgency/data.ts',
     },
 
-    // modules: ['bootstrap-vue/nuxt'],
-    vite: {
-        resolve: {
-            alias: {
-                nuxt: 'nuxt3',
-            },
-        },
-    },
+    modules: ['bootstrap-vue/nuxt'], 
 });
