@@ -91,8 +91,8 @@
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import { initIsotope } from '@/helpers/init-isotope';
 import { onMounted } from 'vue';
-import ProjectCard from '@/views/demos/CreativeAgency/components/ProjectCard.vue';
-import { projects } from '@/views/demos/CreativeAgency/data';
+import ProjectCard from './ProjectCard.vue';
+import { projects } from '../data';
 
 onMounted(() => {
     initIsotope();

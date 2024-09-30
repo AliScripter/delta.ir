@@ -45,7 +45,7 @@
 
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { blogs } from './Blogs.vue';
+// import { blogs } from './Blogs.vue';
 import BlogCard from './BlogCard.vue';
 import { BIconArrowLeft, BIconArrowRight } from 'bootstrap-icons-vue';
 import { Autoplay, Navigation } from 'swiper/modules';

@@ -8,8 +8,8 @@ import { FcGoogle } from 'oh-vue-icons/icons';
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: { enabled: true },
-    ssr: true,
-    vite: false,
+    // ssr: false,
+    // vite: false,
     css: [
         'bs-stepper/dist/css/bs-stepper.min.css',
         'bootstrap/dist/css/bootstrap.css',
@@ -32,7 +32,6 @@ export default defineNuxtConfig({
     plugins: [
         { src: '~/plugins/bootstrap.js', mode: 'client' }, // برای Bootstrap
         { src: '~/plugins/toast.js', mode: 'client' }, // برای Toast
-
         { src: '~/plugins/vue3-autocounter.js', mode: 'client' },
     ],
 
