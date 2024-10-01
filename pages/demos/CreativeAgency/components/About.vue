@@ -21,6 +21,7 @@
                     </p>
 
                     <b-card no-body class="card-body bg-light p-sm-5 h-100">
+                        <h1>Test test et s</h1>
                         <figure
                             class="position-absolute bottom-0 end-0 mb-0 me-3 d-none d-sm-block"
                         >
@@ -356,7 +357,7 @@
                     <div
                         class="position-relative d-flex justify-content-center"
                     >
-                        <img :src="trustPilotLightImg" class="rounded" alt="" />
+                        <img :src="about4" class="rounded" alt="" />
                         <div
                             class="d-inline-block bg-dark shadow rounded-4 position-absolute end-0 top-0 p-3 mt-n5 me-5"
                             data-bs-theme="dark"
@@ -389,10 +390,12 @@
 </template>
 
 <script lang="ts" setup>
+import { BCard } from 'bootstrap-vue-3';
+
 import { inject } from 'vue';
 import { BIconArrowRight, BIconPatchCheckFill } from 'bootstrap-icons-vue';
 
-// import about4 from '@/assets/images/about/04.jpg';
+import about4 from '@/assets/images/about/04.jpg';
 import starImage from '@/assets/images/elements/trustpilot-star.svg';
 import trustpilotImgEN from '@/assets/images/elements/trustpilot.svg';
 import trustpilotLightImgEN from '@/assets/images/elements/trustpilot-light.svg';
@@ -405,10 +408,3 @@ const trustPilotImg = lang === 'fa' ? trustpilotImgFA : trustpilotImgEN;
 const trustPilotLightImg =
     lang === 'fa' ? trustpilotLightImgFA : trustpilotLightImgEN;
 </script>
-
-<!-- <templat>
-    <img :src="x" alt="test" />
-</templat>
-<script setup>
-import x from '@/assets/images/elements/trustpilot-light-fa.svg';
-</script> -->

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div id="back-to-top" class="back-top arrow-none" @click="backToTop">
         <font-awesome-icon :icon="faArrowUpLong" />
     </div>
@@ -27,4 +27,7 @@ const backToTop = () => {
         behavior: 'smooth',
     });
 };
-</script>
+</script> -->
+<template>
+    <p>backToTop</p>
+</template>
